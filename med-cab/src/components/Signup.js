@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { withFormik, Form, Field, yupToFormErrors} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import {T} from '../App'
 
 
 //Frances Hansen
@@ -9,7 +10,7 @@ const Signup = ({touched, errors}) => {
 
      return (
        <div className='signup'>
-         <h1>Sign Up</h1>
+         <T.H1>Sign Up</T.H1>
          <Form>
            <label>
              Username:
