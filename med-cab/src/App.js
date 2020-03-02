@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 
+import * as T from './config/theme'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Signin from './components/Signin';
+export {T}
 
 
 function App() {
