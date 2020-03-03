@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
 export {T};
-
 function App() {
   return (
     <div className='App'>
