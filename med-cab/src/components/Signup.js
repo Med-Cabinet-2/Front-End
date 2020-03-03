@@ -2,7 +2,10 @@ import React, {useState, useEffect} from "react";
 import { withFormik, Form, Field, yupToFormErrors} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+
+import { Link } from 'react-router-dom';
 import {T} from '../App'
+
 
 
 //Frances Hansen
@@ -22,9 +25,9 @@ const Signup = ({touched, errors}) => {
 
              <label>
                Email:
-             <Field type='email' name='emailaddress' placeholder='Email'/>
-             {touched.emailaddress && errors.emailaddress && (
-               <p>{errors.emailaddress}</p>
+             <Field type='email' name='email' placeholder='Email'/>
+             {touched.email && errors.email && (
+               <p>{errors.email}</p>
              )}
              </label>
 
@@ -46,6 +49,8 @@ const Signup = ({touched, errors}) => {
              </label>
 
            <button>Register</button>
+            
+            <p>Already have an account? <Link to='/signin'>Click here</Link> to sign in!</p>
 
          </Form>
        </div>
@@ -56,13 +61,13 @@ const Signup = ({touched, errors}) => {
 export default withFormik({
   mapPropsToValues: props => ({
       username: props.username || '',
-      emailaddress: props.emailaddress || '',
+      email: props.email || '',
       pw: props.pw || '',
       TOS: false,
     }),
     validationSchema: Yup.object().shape({
       username: Yup.string().min(3).required('Please provide a valid username'),
-      emailaddress: Yup.string().email().required('Please provide a valid e-mail address'),
+      email: Yup.string().email().required('Please provide a valid e-mail address'),
       TOS: Yup.bool().oneOf([true], "Must agree to TOS")
     }),
     handleSubmit: (values, {resetForm, setStatus }) => {
