@@ -6,7 +6,6 @@ import Axios from 'axios';
 import {T} from '../App'
 
 // Jana Scheuble
-//
 
 function Signin(props) {
     return(
