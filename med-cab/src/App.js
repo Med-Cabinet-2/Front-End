@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
-export {T}
+export {T};
 
 function App() {
   return (
