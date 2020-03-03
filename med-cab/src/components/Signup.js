@@ -50,7 +50,7 @@ const Signup = ({touched, errors}) => {
 
            <button>Register</button>
             
-            <p>Already have an account? <Link to='/signin'>Click here</Link> to sign in!</p>
+            <p>Already have an account? <Link to='/'>Click here</Link> to sign in!</p>
 
          </Form>
        </div>
