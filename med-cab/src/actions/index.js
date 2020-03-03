@@ -1,6 +1,7 @@
 import axios from "axios"
 
 export const FETCH_DATA = "FETCH_DATA";
+export const ed1t = "ED1T"
 export const SET_ERROR = "SET_ERROR";
 export const POST_DATA = "POST_DATA"
 export const getData = () => dispatch => {
