@@ -10,7 +10,7 @@ import data from '../PrefData';
 function Preferences(props) {
     return(
         <div className='preferences'>
-        <h1>Select all that apply</h1>
+        <h1>What can we help you with?</h1>
         <Form onSubmit={props.handleSubmit}>
             <label>I would like to improve my
                 <Field component='select' name='effect' value={props.values.effect}>
@@ -28,6 +28,9 @@ function Preferences(props) {
                     })}
                 </Field>
             </label>
+            <label>Other
+                <Field type='text' name='other' placeholder='other' />
+            </label>
             <button type='submit'>Continue</button>
         </Form>
         </div>
@@ -39,11 +42,13 @@ const FormikPreferences = withFormik({
         return {
             effect: effect || false,
             condition: condition || false,
+            other: ''
         };
     },
     validationSchema: Yup.object().shape({
         effect: Yup.boolean(),
-        condition: Yup.boolean()
+        condition: Yup.boolean(),
+        other: Yup.string().matches(/^[a-z]+$/)
     }),
     handleSubmit(values, { setStatus, resetForm }) {
         console.log(values);
