@@ -12,7 +12,7 @@ import {T} from '../App'
 const Signup = ({touched, errors}) => {
 
      return (
-       <div className='signup'>
+       <T.Up>
          <T.H1>Sign Up</T.H1>
          <Form>
            <label>
@@ -33,7 +33,7 @@ const Signup = ({touched, errors}) => {
 
              <label>
                Password:
-             <Field type='text' name='pw' placeholder='Password'/>
+             <Field type='text' name='password' placeholder='Password'/>
              </label>
 
              <label className='TOS'>
@@ -53,7 +53,7 @@ const Signup = ({touched, errors}) => {
             <p>Already have an account? <Link to='/'>Click here</Link> to sign in!</p>
 
          </Form>
-       </div>
+       </T.Up>
      )
 
 }
@@ -62,7 +62,7 @@ export default withFormik({
   mapPropsToValues: props => ({
       username: props.username || '',
       email: props.email || '',
-      pw: props.pw || '',
+      password: props.password || '',
       TOS: false,
     }),
     validationSchema: Yup.object().shape({

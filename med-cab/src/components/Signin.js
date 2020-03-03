@@ -3,6 +3,7 @@ import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
+import {T} from '../App'
 
 // Jana Scheuble
 //
@@ -10,7 +11,7 @@ import Axios from 'axios';
 function Signin(props) {
     return(
         <div className='signin'>
-        <h1>Sign in</h1>
+        <T.H1>Sign in</T.H1>
         <Form>
             <label>Email: 
                 <Field type='text' name='email' placeholder='Email Address' onChange={props.handleChange} value={props.values.email} />
