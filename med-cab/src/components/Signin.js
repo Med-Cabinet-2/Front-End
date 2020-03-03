@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Axios from 'axios';
 
 // Jana Scheuble
-//
 
 function Signin(props) {
     return(
