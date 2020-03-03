@@ -6,7 +6,6 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import {T} from '../App'
 
-export {T};
 
 
 //Frances Hansen
@@ -51,7 +50,7 @@ const Signup = ({touched, errors}) => {
 
            <button>Register</button>
             
-            <p>Already have an account? <Link to='/signin'>Click here</Link> to sign in!</p>
+            <p>Already have an account? <Link to='/'>Click here</Link> to sign in!</p>
 
          </Form>
        </div>
