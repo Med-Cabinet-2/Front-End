@@ -6,6 +6,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import {T} from '../App'
 
+export {T};
 
 
 //Frances Hansen
