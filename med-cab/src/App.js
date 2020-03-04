@@ -34,7 +34,7 @@ function App() {
               <Signin canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
             </Route>
             <Route path='/signup'>
-              <Signup />
+              <Signup canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
             </Route>
             <PrivateRoute path="/dashboard" component={Dashboard} />
             {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}

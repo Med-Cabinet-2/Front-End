@@ -51,8 +51,13 @@ const FormikSignIn = withFormik({
 
         let setCanRedirect = values.setCanRedirect
         console.log(values);
+        let pushObject = {
+            username: values.username,
+            email: values.email,
+            password: values.password
+        }
         axiosWithAuth()
-            .post('/api/users/login', values)
+            .post('/api/users/login', pushObject)
             .then(res => {
                 window.localStorage.setItem('token', res.data.token);
                 // navigate the user to ed1t (whatever landing page)
