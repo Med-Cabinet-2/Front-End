@@ -36,7 +36,7 @@ const FormikSignIn = withFormik({
     },
     validationSchema: Yup.object().shape({
         email: Yup.string().email().required('Please provide a valid e-mail address'),
-        password: Yup.string().min(8).required('Password must exceed 8 characters')
+        password: Yup.string().min(3).required('Password must exceed 8 characters')
     }),
     handleSubmit(values, { setStatus, resetForm }) {
         console.log(values);

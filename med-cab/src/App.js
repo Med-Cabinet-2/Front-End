@@ -1,8 +1,8 @@
 import React from 'react';
-import { reducer } from "./reducers/reducer"
-import { createStore, applyMiddleware } from "redux"
-import { Provider } from "react-redux"
-import thunk from "redux-thunk"
+// import { reducer } from "./reducers/reducer"
+// import { createStore, applyMiddleware } from "redux"
+// import { Provider } from "react-redux"
+// import thunk from "redux-thunk"
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import * as T from './config/theme'
