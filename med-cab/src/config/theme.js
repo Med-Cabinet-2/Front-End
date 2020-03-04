@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-
+//Frances Hansen
 
 const theme = {
   primary: '#170617',
@@ -43,28 +43,45 @@ export const NavLinkx = styled(NavLink)`
 export const Wrap = styled.section `
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: center;
   color: ${props => props.theme.blinded};
   background-color: ${props => props.theme.primary};
+  height: 70vh;
 
 `
 
 export const In = styled.section `
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  color: ${props => props.theme.sunrise};
-  background-color: ${props => props.theme.primary};
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+margin: auto;
+align-items: center;
+justify-content: center;
+
+  
 
 `
 
 export const Up = styled.section `
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 70%;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+margin: auto;
+align-items: center;
+justify-content: center;
+
+`
+
+export const P = styled.p `
+
+width: 100%;
+font-size: .5rem;
+color: #d50cd1;
+z-index: 10001;
+margin-left: -100%;
+margin-bottom: -30%;
+
 
 `
 
@@ -83,7 +100,7 @@ export const WeedBoxContainer = styled.section `
   flex-wrap: wrap;
   flex-direction: row;
   width: 80%;
-  height: 40hv;
+  
   border: 1px solid red;
 
 `

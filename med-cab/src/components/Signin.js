@@ -15,9 +15,10 @@ function Signin(props) {
     if (props.canRedirect) { return <Redirect to="/dashboard" /> }
 
     return (
-        <div className='signin'>
+        <div className=''>
             <T.H1>Sign in</T.H1>
-            <Form>
+            <T.In>
+            <Form style={{width:'25%'}}>
                 <label>Email:
                 <Field type='text' name='email' placeholder='Email Address' onChange={props.handleChange} value={props.values.email} />
                 </label>
@@ -25,10 +26,11 @@ function Signin(props) {
                 <label>Password:
                 <Field type='password' name='password' placeholder='Password' onChange={props.handleChange} value={props.values.password} />
                 </label>
-                {props.touched.password && props.errors.password && (<p className='errors'>{props.errors.password}</p>)}
+                {props.touched.password && props.errors.password && (<p className='errrors'>{props.errors.password}</p>)}
                 <button type='submit'>Sign in</button>
             </Form>
             <p>Don't have an account? <Link to='/signup'>Register here</Link></p>
+            </T.In>
         </div>
     );
 }

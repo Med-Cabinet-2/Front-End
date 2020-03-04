@@ -13,6 +13,20 @@
   pointer-events: none;
 }
 
+.errrors {
+  width: 100%;
+  font-size: .5rem;
+  color: #d50cd1;
+  z-index: 10001;
+  margin-left: 300%;
+  margin-bottom: -30%;
+  margin-top: 10%;
+}
+
+.signin{
+  
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

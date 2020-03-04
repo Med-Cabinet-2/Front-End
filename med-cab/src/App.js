@@ -16,6 +16,7 @@ import Preferences from "./components/Preferences"
 import Dashboard from "./components/Dashboard"
 import MainPage from "./components/Mainpage"
 import SearchByPref from './components/SearchByPref';
+import SearchPage from './components/SearchPage';
 // import Mainpage from "./component/Mainpage"
 export { T }
 
@@ -37,6 +38,10 @@ function App() {
             </Route>
             <Route path='/signup'>
               <Signup canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
+            </Route>
+
+            <Route path='/Search'>
+              <SearchPage />
             </Route>
             <PrivateRoute path="/preferences" component={Preferences} />
             <PrivateRoute path="/dashboard" component={Dashboard} />

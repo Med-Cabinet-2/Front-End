@@ -7,6 +7,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth"
 
 import { Link } from 'react-router-dom';
 import { T } from '../App'
+import { reducer } from "../reducers/reducer";
 
 
 
@@ -16,27 +17,28 @@ const Signup = ({ touched, errors, canRedirect, setCanRedirect }) => {
   if (canRedirect) { return <Redirect to="/dashboard" /> }
 
   return (
-    <T.Up>
+    <div>
       <T.H1>Sign Up</T.H1>
-      <Form>
+      <T.Up>
+      <Form style={{width:'25%'}}>
         <label>
-          Username:
+         
            <Field type='text' name='username' placeholder='Username' />
           {touched.username && errors.username && (
-            <p>{errors.username}</p>
+            <p style={{width:'100%', fontSize: '.5rem', color: '#d50cd1', Zindex:'10001', marginLeft:'-100%', marginBottom:'-30%'}}>{errors.username}</p>
           )}
         </label>
 
         <label>
-          Email:
+          
              <Field type='email' name='email' placeholder='Email' />
           {touched.email && errors.email && (
-            <p>{errors.email}</p>
+            <p style={{width:'100%', fontSize: '.5rem', color: '#d50cd1', Zindex:'10001', marginLeft:'-100%', marginBottom:'-30%'}}>{errors.email}</p>
           )}
         </label>
 
         <label>
-          Password:
+          
              <Field type='password' name='password' placeholder='Password' />
         </label>
 
@@ -48,16 +50,18 @@ const Signup = ({ touched, errors, canRedirect, setCanRedirect }) => {
 
           />
           {touched.TOS && errors.TOS && (
-            <p>{errors.TOS}</p>
+            <T.P>{errors.TOS}</T.P>
           )}
         </label>
 
         <button>Register</button>
 
-        <p>Already have an account? <Link to='/'>Click here</Link> to sign in!</p>
+        
 
       </Form>
+      <p style={{width:''}}>Already have an account? <Link to='/'>Click here</Link> to sign in!</p>
     </T.Up>
+    </div>
   )
 
 }
