@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { T } from '../App'
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-
+//Frances Hansen
 export default function Searching() {
   const [strains, setStrain] = useState([]);
 
@@ -82,3 +82,4 @@ export default function Searching() {
   )
 }
 
+//Frances Hansen
