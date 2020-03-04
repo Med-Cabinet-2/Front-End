@@ -29,7 +29,7 @@ function Preferences(props) {
                 </Field>
             </label>
             <label>Other
-                <Field type='text' name='other' placeholder='other' />
+                <Field type='text' name='other' placeholder='search by symptom' />
             </label>
             <button type='submit'>Continue</button>
         </Form>
