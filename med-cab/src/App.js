@@ -28,6 +28,8 @@ function App() {
         <Header />
         <T.Wrap>
           <Switch>
+            {/* <Search/> */}
+
             <Route exact path='/' >
               <Signin canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
             </Route>
