@@ -1,42 +1,42 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {T} from '../App'
+import { T } from '../App'
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 export default function Searching() {
   const [strains, setStrain] = useState([]);
 
- 
+
 
   const [query, setQuery] = useState("");
 
-  console.log("S T R A I N S",strains)
-  
+  console.log("S T R A I N S", strains)
+
 
   useEffect(() => {
-    axios
-      .get(`http://strainapi.evanbusse.com/W9EAUtJ/strains/search/race/${query}`)
-       
+    axiosWithAuth()
+      .get(`/api/strains`)
       .then(response => {
         const data = Object.values(response.data);
-        console.log("D A T A",query);
-        
+
         console.log("I N F O ", data)
         const result = data.filter(name =>
-          
-          name.name.toLowerCase().includes(query.toLowerCase())
+
+          console.log(name)
+          // name.toLowerCase().includes(query.toLowerCase())
         );
         setStrain(result);
         console.log("R E S U L T ", result)
       });
   }, [query]);
   const handleInputChange = event => {
-    
+
     setQuery(event.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-  } 
+  }
 
   const indica = event => {
     document.forms["form"]["search"].value += 'indica'
@@ -49,11 +49,11 @@ export default function Searching() {
   const hybrid = event => {
     document.forms["form"]["search"].value += 'hybrid'
   }
-  
-  console.log("Q U E R Y",query)
 
-return(
-  <div>
+  console.log("Q U E R Y", query)
+
+  return (
+    <div>
       <form name="form" className="search">
         <input
           type="text"
@@ -66,19 +66,19 @@ return(
         />
         <button type='submit' onSubmit={submitHandler}>Search</button>
 
-        <a href="#"type='' onClick={submitHandler,indica}>#indica</a>
-        <a href="#"type='' onClick={submitHandler,sativa}>#sativa</a>
-        <a href="#"type='' onClick={submitHandler,hybrid}>#hybrid</a>
+        <a href="#" type='' onClick={submitHandler, indica}>#indica</a>
+        <a href="#" type='' onClick={submitHandler, sativa}>#sativa</a>
+        <a href="#" type='' onClick={submitHandler, hybrid}>#hybrid</a>
       </form>
       <T.WeedBox>
         {strains.map(pot => (
 
           <T.WeedBox>
-          <p key={pot.id}>  {pot.name} </p>
+            <p key={pot.id}>  {pot.name} </p>
           </T.WeedBox>
         ))}
       </T.WeedBox>
-  </div>
-)
+    </div>
+  )
 }
 

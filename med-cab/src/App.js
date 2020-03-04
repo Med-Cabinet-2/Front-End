@@ -12,6 +12,7 @@ import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Search from './components/Search';
 import PrivateRoute from './components/PrivateRoute';
+import Preferences from "./components/Preferences"
 import { Dashboard } from "./components/Dashboard"
 import SearchByPref from './components/SearchByPref';
 // import Mainpage from "./component/Mainpage"
@@ -29,7 +30,6 @@ function App() {
         <Header />
         <T.Wrap>
           <Switch>
-            {/* <Search/> */}
 
             <Route exact path='/' >
               <Signin canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
@@ -37,6 +37,7 @@ function App() {
             <Route path='/signup'>
               <Signup canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
             </Route>
+            <PrivateRoute path="/preferences" component={Preferences} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
             {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
             <Route path='/Recommender'>
