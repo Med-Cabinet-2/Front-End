@@ -1,4 +1,4 @@
-import { FETCH_DATA, UPDATE_CHARACTER, SET_ERROR } from "../actions";
+import { FETCH_DATA, ED1T, SET_ERROR } from "../actions";
 
 const initialState = {
   strains: [{
