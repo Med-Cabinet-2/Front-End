@@ -25,7 +25,10 @@ function App() {
       
       </Switch>
       </T.Wrap>
-      <Search/>
+      <Search>
+
+      </Search>
+
       <Footer />
 
     </div>
