@@ -13,6 +13,7 @@ import Signup from './components/Signup';
 import Search from './components/Search';
 import PrivateRoute from './components/PrivateRoute';
 import { Dashboard } from "./components/Dashboard"
+import SearchByPref from './components/SearchByPref';
 // import Mainpage from "./component/Mainpage"
 export { T }
 
@@ -38,7 +39,9 @@ function App() {
             </Route>
             <PrivateRoute path="/dashboard" component={Dashboard} />
             {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
-
+            <Route path='/Recommender'>
+              <SearchByPref />
+            </Route>
 
           </Switch>
         </T.Wrap>
