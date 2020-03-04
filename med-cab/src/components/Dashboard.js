@@ -1,19 +1,26 @@
 import React from "react"
 import { connect } from "react-redux"
+import { DashboardDiv } from "./DashboardDiv"
 
-const Dashboard = props => {
-  props.strains.map(strain => {
+export const Dashboard = () => {
+  return (
     <DashboardDiv />
-  })
+  )
 }
 
-const mapStateToProps = state => {
-  return {
-    strains: props//fill in
-  }
-}
+// const Dashboard = props => {
+//   props.strains.map(strain => {
+//     <DashboardDiv />
+//   })
+// }
 
-export default connect(
-  mapStateToProps,
-  {}
-)(Dashboard)
+// const mapStateToProps = state => {
+//   return {
+//     strains: state.strains
+//   }
+// }
+
+// export default connect(
+//   mapStateToProps,
+//   {}
+// )(Dashboard)

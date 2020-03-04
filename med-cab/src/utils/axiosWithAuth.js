@@ -6,6 +6,6 @@ export const axiosWithAuth = () => {
     headers: {
       authorization: token
     },
-    baseURL: 'ed1t'
+    baseURL: 'https://med-cabinet2.herokuapp.com'
   });
 };

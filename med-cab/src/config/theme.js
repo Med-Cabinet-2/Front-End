@@ -68,6 +68,26 @@ export const Up = styled.section `
 
 `
 
+export const WeedBox = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+
+`
+
+export const WeedBoxContainer = styled.section `
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80%;
+  height: 40hv;
+  border: 1px solid red;
+
+`
+
 export const H1 = styled.h1 `
 background-image: linear-gradient(to left, #020d22, #052143, #043467, #02488e, #035db6, #6264cb, #9d66d8, #d566dc, #ff5bae, #ff7375, #ffa33b, #ffd400);
 
