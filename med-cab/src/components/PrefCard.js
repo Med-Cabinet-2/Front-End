@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Jana Scheuble
+
 const Card = styled.div`
     border: 2px solid white;
     width: 25%;
