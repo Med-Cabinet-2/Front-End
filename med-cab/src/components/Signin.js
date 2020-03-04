@@ -6,7 +6,7 @@ import Axios from 'axios';
 import {T} from '../App'
 
 // Jana Scheuble
-
+import SearchByPref from './SearchByPref';
 function Signin(props) {
     return(
         <div className='signin'>
@@ -23,6 +23,7 @@ function Signin(props) {
             <button type='submit'>Sign in</button>
         </Form>
         <p>Don't have an account? <Link to='/signup'>Register here</Link></p>
+        <SearchByPref />
         </div>
     );
 }
