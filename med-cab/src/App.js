@@ -15,6 +15,8 @@ import PrivateRoute from './components/PrivateRoute';
 import Preferences from "./components/Preferences"
 import Dashboard from "./components/Dashboard"
 import MainPage from "./components/Mainpage"
+import SearchByPref from './components/SearchByPref';
+// import Mainpage from "./component/Mainpage"
 export { T }
 
 const store = createStore(reducer, applyMiddleware(thunk))
@@ -40,6 +42,10 @@ function App() {
             <PrivateRoute path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/mainpage" component={MainPage} />
 
+            {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
+            <Route path='/Recommender'>
+              <SearchByPref />
+            </Route>
 
           </Switch>
         </T.Wrap>

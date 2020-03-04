@@ -41,8 +41,8 @@ export default function SearchByPref() {
     return(
         <div className='preferences-search'>
             <form>
-                <input type='text' name='keyword' placeholder='search by keyword' onChange={handleChange} value={query} />
-                <button>Reset</button>
+                <input id='keyword' type='text' name='keyword' placeholder='search by keyword' onChange={handleChange} value={query} />
+                <button className='reset'>Reset</button>
             </form>
             <div className='card-container-pref'>
             {data.map((e, i) => {
