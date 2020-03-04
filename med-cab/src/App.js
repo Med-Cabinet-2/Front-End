@@ -13,8 +13,8 @@ import Signup from './components/Signup';
 import Search from './components/Search';
 import PrivateRoute from './components/PrivateRoute';
 import Preferences from "./components/Preferences"
-import { Dashboard } from "./components/Dashboard"
-// import Mainpage from "./component/Mainpage"
+import Dashboard from "./components/Dashboard"
+import MainPage from "./components/Mainpage"
 export { T }
 
 const store = createStore(reducer, applyMiddleware(thunk))
@@ -38,12 +38,12 @@ function App() {
             </Route>
             <PrivateRoute path="/preferences" component={Preferences} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
-            {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
+            <PrivateRoute path="/mainpage" component={MainPage} />
 
 
           </Switch>
         </T.Wrap>
-        <Search />
+        {/* <Search /> */}
         <Footer />
       </Provider>
     </div>

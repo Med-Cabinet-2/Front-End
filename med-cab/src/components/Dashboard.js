@@ -1,26 +1,42 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
-import { DashboardDiv } from "./DashboardDiv"
+import DashboardDiv from "./DashboardDiv"
+import { getSavedStrainData } from "../actions/index"
 
-export const Dashboard = () => {
+// export const Dashboard = () => {
+//   return (
+//     <DashboardDiv />
+//   )
+// }
+
+const Dashboard = props => {
+
+  console.log(props)
+
+  useEffect(() => {
+    setTimeout(
+      props.getSavedStrainData()
+      , 200)
+  }, [])
+
   return (
-    <DashboardDiv />
+    props.savedStrains.map(strain => {
+      return (
+        <div>
+          <DashboardDiv strain={strain} />
+        </div>
+      )
+    })
   )
 }
 
-// const Dashboard = props => {
-//   props.strains.map(strain => {
-//     <DashboardDiv />
-//   })
-// }
+const mapStateToProps = state => {
+  return {
+    savedStrains: state.savedStrains
+  }
+}
 
-// const mapStateToProps = state => {
-//   return {
-//     strains: state.strains
-//   }
-// }
-
-// export default connect(
-//   mapStateToProps,
-//   {}
-// )(Dashboard)
+export default connect(
+  mapStateToProps,
+  { getSavedStrainData }
+)(Dashboard)
