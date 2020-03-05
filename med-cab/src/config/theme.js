@@ -89,9 +89,16 @@ export const WeedBox = styled.div `
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 150px;
+  text-align: center;
+  justify-content: center;
+  width: 200px;
   height: 150px;
   border: 1px solid black;
+  background: #0B300B;
+  -webkit-box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
+  -moz-box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
+  box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
+  margin: 3% auto;
 
 `
 
@@ -99,9 +106,10 @@ export const WeedBoxContainer = styled.section `
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 80%;
+  width: 100%;
+  text-align: center;
   
-  border: 1px solid red;
+  
 
 `
 
@@ -109,6 +117,9 @@ export const H1 = styled.h1 `
 background-image: linear-gradient(to left, #020d22, #052143, #043467, #02488e, #035db6, #6264cb, #9d66d8, #d566dc, #ff5bae, #ff7375, #ffa33b, #ffd400);
 
 color: ${props => props.theme.sunrise};
+
+max-width: 85% !important;
+margin: 3% auto;
 `
 
 export const Footer = styled.footer `

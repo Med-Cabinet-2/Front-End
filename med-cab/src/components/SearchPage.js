@@ -8,8 +8,8 @@ export default function SearchPage() {
 
   return(
     <div>
-      <T.H1>Strain Search</T.H1>
-      <Searching/>
+      <T.H1 style={{Maxwidth:'35%'}}>Strain Search</T.H1>
+      <Searching />
     </div>
   )
 }

@@ -1,9 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {T} from '../App'
+
 //Frances Hansen
 export default function Searching() {
-  const [strains, setStrain] = useState([]);
+  const [strains, setStrain] = useState([
+
+    {
+      id: 1,
+      name: "asdasd",
+      img: `https://francesjuniper.com/assets/indica.png`,
+
+
+
+    },
+    {
+      id: 2,
+      name: "",
+      img: 'https://francesjuniper.com/assets/indica.png',
+
+
+
+    }
+  ]);
 
  
 
@@ -81,20 +100,30 @@ return(
           tabIndex="0"
         />
         <button type='submit' onSubmit={submitHandler}>Search</button>
+      
+      </form>  
+      <div>
+        <p>Filter: </p>
+        <a href="#"type='' onClick={e => setQuery('indica')}>#indica<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/indica.png'></img></a>
 
-        <a href="#"type='' onClick={e => setQuery('indica')}>#indica</a>
-        <a href="#"type='' onClick={e => setQuery('sativa')}>#sativa</a>
-        <a href="#"type='' onClick={e => setQuery('hybrid')}>#hybrid</a>
+        <a href="#"type='' onClick={e => setQuery('hybrid')}>#hybrid<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/hybrid.png'></img></a>
+
+        <a href="#"type='' onClick={e => setQuery('sativa')}>#sativa<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/sativa.png'></img></a>
+
         <a href="#"type='' onClick={e => setQuery('test')}>#test</a>
-      </form>
-      <T.WeedBox>
+        </div>
+      <T.WeedBoxContainer>
         {strains.map(pot => (
 
           <T.WeedBox>
           <p key={pot.id}>  {pot.name} </p>
+          <img style={{width:'2.5rem', height:'2.5rem'}} src={query == false ? 'https://francesjuniper.com/assets/indica.png' : `https://francesjuniper.com/assets/${query}.png`}/>
           </T.WeedBox>
         ))}
-      </T.WeedBox>
+        <div>
+          <p></p>
+        </div>
+      </T.WeedBoxContainer>
   </div>
 )
 }
