@@ -55,6 +55,7 @@ function App() {
         </T.Wrap>
 
         {/* <Search /> */}
+
         <Footer />
       </Provider>
     </div>

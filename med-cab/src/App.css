@@ -85,7 +85,6 @@ body {
 }
 
 .reset {
-  margin-left  : 1%;
   margin       : 5% auto;
   color        : white;
   background   : black;
@@ -106,4 +105,8 @@ body {
 
 .kw-name {
   font-size: 20px;
+}
+
+#keyword {
+  margin-top: 2%;
 }
