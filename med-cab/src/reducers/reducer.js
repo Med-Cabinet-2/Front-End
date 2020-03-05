@@ -24,7 +24,7 @@ export const reducer = (state = initialState, action) => {
       console.log(action.payload)
       return {
         ...state,
-        strain: action.payload,
+        strains: action.payload,
         isFetchingData: false
       }
 

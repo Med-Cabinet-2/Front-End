@@ -15,7 +15,7 @@ const MainPage = props => {
   }, [])
 
   return (
-    props.savedStrains.map(strain => {
+    props.strains.map(strain => {
       return (
         <div>
           <MainPageDiv strain={strain} />
@@ -26,8 +26,9 @@ const MainPage = props => {
 }
 
 const mapStateToProps = state => {
+  console.log("state inside mapStateToProps of MainPage", state)
   return {
-    savedStrains: state.savedStrains
+    strains: state.strains
   }
 }
 
