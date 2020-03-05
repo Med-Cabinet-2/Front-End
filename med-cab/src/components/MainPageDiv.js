@@ -17,8 +17,11 @@ const MainPageDiv = props => {
     <>
       <h1>{props.strain.strain_name}</h1>
       <p>{props.strain.strain_type}</p>
+      <p>{props.strain.strain_rating}</p>
+      <p>{props.strain.strain_effects}</p>
+      <p>{props.strain.strain_flavors}</p>
       <p>{props.strain.strain_description}</p>
-      <button onClick={() => { props.addSavedStrainData(id, props.strain) }}>Save</button>
+      <button onClick={() => { props.addSavedStrainData(id, props.strain.strain_id) }}>Save</button>
     </>
   )
 }
