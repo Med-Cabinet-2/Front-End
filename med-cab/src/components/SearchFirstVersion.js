@@ -8,7 +8,7 @@ export default function Searching() {
 
     {
       id: 1,
-      name: "asdasd",
+      name: "Indica",
       img: `https://francesjuniper.com/assets/indica.png`,
 
 
@@ -16,7 +16,7 @@ export default function Searching() {
     },
     {
       id: 2,
-      name: "",
+      name: "Indica Plus",
       img: 'https://francesjuniper.com/assets/indica.png',
 
 
