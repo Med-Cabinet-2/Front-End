@@ -24,6 +24,10 @@ export default function Searching() {
     }
   ]);
 
+  const [ID, setID] = useState([
+
+  ])
+
  
 
   const [query, setQuery] = useState("");
@@ -43,11 +47,32 @@ export default function Searching() {
         const result = data.filter(name =>
           
           name.name.toLowerCase().includes(query.toLowerCase())
+          
+
         );
+
         setStrain(result);
         console.log("R E S U L T ", result)
       });
+
+        // .then(response => {
+        //   const idata = Object.values(response.idata);
+        //   const resulting = data.filter(id =>
+          
+        //     id.id.toLowerCase.includes(ID.toLowerCase())
+  
+        //   );
+        //   setID(resulting)
+        // })
+
   }, [query]);
+  // axios
+  // .get(`strainapi.evanbusse.com/W9EAUtJ/strains/data/desc/${id}`)
+  // .then(res => {
+  //   const datas = res.data
+  //   console.log('E F F E C T S', res.datas)
+  // })
+  
   const handleInputChange = event => {
     
     setQuery(event.target.value);
