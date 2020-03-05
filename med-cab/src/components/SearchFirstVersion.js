@@ -115,7 +115,7 @@ export default function Searching() {
 return(
   <T.FormBox>
       <form name="form" className="search">
-        <input
+        <T.Inputx
           type="text"
           onChange={e => setQuery(e.target.value)}
           value={query}
@@ -128,12 +128,12 @@ return(
       
       </form>  
       <T.FilterBox>
-        <p>Filter: </p>
-        <a href="#"type='' onClick={e => setQuery('indica')}>#indica<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/indica.png'></img></a>
+        
+        <T.A href="#"type='' onClick={e => setQuery('indica')}><ins style={{color:'#8500A7'}}>#</ins>indica<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/indica.png'></img></T.A>
 
-        <a href="#"type='' onClick={e => setQuery('hybrid')}>#hybrid<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/hybrid.png'></img></a>
+        <T.A href="#"type='' onClick={e => setQuery('hybrid')}><ins style={{color:'#03cc24'}}>#</ins>hybrid<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/hybrid.png'></img></T.A>
 
-        <a href="#"type='' onClick={e => setQuery('sativa')}>#sativa<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/sativa.png'></img></a>
+        <T.A href="#"type='' onClick={e => setQuery('sativa')}><ins style={{color:'#CBDE2D'}}>#</ins>sativa<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/sativa.png'></img></T.A>
 
         
         </T.FilterBox>

@@ -106,7 +106,7 @@ export const WeedBox = styled.div `
   -webkit-box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
   -moz-box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
   box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
-  margin: .5rem 1.6rem;
+  margin: 1.5rem 1.6rem;
  
   
 
@@ -143,6 +143,17 @@ export const FormBox = styled.div `
   
 
 `
+export const Inputx = styled.input `
+text-align: center;
+background: #212121;
+color: ${props => props.theme.retro};
+border: none;
+font-size: 1em;
+margin-bottom: 4%;
+  
+  
+
+`
 
 export const FilterBox = styled.div `
   display: flex;
@@ -151,8 +162,29 @@ export const FilterBox = styled.div `
   text-align: center;
   justify-content: space-between;
   width: 500px;
-  
+
   margin: auto;
+  margin-bottom: 2%;
+
+  
+
+`
+
+export const A = styled.a `
+font-size: 1.5em;
+color:  ${props => props.theme.retro};
+  
+   &:visited {
+    color: ${props => props.theme.blinded}
+  }
+
+  &:hover {
+    color: ${props => props.theme.retro};
+  }
+
+  &:active {
+    color: green;
+  }
   
   
 
