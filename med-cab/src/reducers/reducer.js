@@ -1,31 +1,39 @@
-import { FETCH_DATA, UPDATE_STRAIN, SET_ERROR } from "../actions";
+import { FETCH_DATA, UPDATE_STRAINS, UPDATE_SAVEDSTRAINS, SET_ERROR } from "../actions";
 
 const initialState = {
   isFetchingData: false,
   error: "",
   strains: [{
-    name: "weed",
-    effects: ["chill"]
-  }, {
-    name: "weed 2",
-    effects: ["pain", "anxiety"]
-  }]
+    strain_id: 1,
+    strain_name: "Cracker-Jack",
+    strain_type: "sativa",
+    strain_description: "this"
+  }],
 
+  savedStrains: [{
+    strain_id: 1,
+    strain_name: "Cracker-Jack-2",
+    strain_type: "sativa",
+    strain_description: "this"
+  }]
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_DATA:
-      return {
-        ...state,
-        isFetchingData: true,
-        character: {}
-      }
-
-    case UPDATE_STRAIN:
+    case UPDATE_STRAINS:
+      console.log(action.payload)
       return {
         ...state,
         strain: action.payload,
+        isFetchingData: false
+      }
+
+
+    case UPDATE_SAVEDSTRAINS:
+      console.log("action payload inside update_savedstrains", action.payload)
+      return {
+        ...state,
+        savedStrains: action.payload,
         isFetchingData: false
       }
 
@@ -35,6 +43,7 @@ export const reducer = (state = initialState, action) => {
         error: action.payload,
         isFetchingData: false
       }
+
     default:
       return state
   }

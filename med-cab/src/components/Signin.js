@@ -47,26 +47,22 @@ const FormikSignIn = withFormik({
     },
     validationSchema: Yup.object().shape({
         email: Yup.string().email().required('Please provide a valid e-mail address'),
-        password: Yup.string().min(3).required('Password must exceed 8 characters')
+        password: Yup.string().min(3).required('Password must exceed 3 characters')
     }),
     handleSubmit(values, { setStatus, resetForm }) {
 
         let setCanRedirect = values.setCanRedirect
         console.log(values);
-        let pushObject = {
-            username: values.username,
-            email: values.email,
-            password: values.password
-        }
         axiosWithAuth()
-            .post('/api/users/login', pushObject)
+            .post('/api/users/login', values)
             .then(res => {
+                console.log("sign in response api", res)
                 window.localStorage.setItem('token', res.data.token);
+                window.localStorage.setItem('id', res.data.user.user_id);
                 // navigate the user to ed1t (whatever landing page)
                 setStatus(res)
                 resetForm()
                 setCanRedirect(true)
-
             })
             .catch(err => console.log(err));
 

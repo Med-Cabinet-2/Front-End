@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import Axios from 'axios';
 
 import data from '../PrefData';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 // Jana Scheuble
 
@@ -52,7 +53,7 @@ const FormikPreferences = withFormik({
     }),
     handleSubmit(values, { setStatus, resetForm }) {
         console.log(values);
-        Axios.post('', values)
+        axiosWithAuth.post('/api/'/*change /api/ to for example /api/preferences*/, values)
             .then(res => {
                 console.log('success', res);
                 setStatus(res);

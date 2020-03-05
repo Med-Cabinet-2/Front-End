@@ -13,7 +13,9 @@ import Signup from './components/Signup';
 import Search from './components/Search';
 import PrivateRoute from './components/PrivateRoute';
 import Preferences from "./components/Preferences"
-import { Dashboard } from "./components/Dashboard"
+import Dashboard from "./components/Dashboard"
+import MainPage from "./components/Mainpage"
+import SearchByPref from './components/SearchByPref';
 import SearchPage from './components/SearchPage';
 // import Mainpage from "./component/Mainpage"
 export { T }
@@ -39,16 +41,24 @@ function App() {
             </Route>
 
             <Route path='/Search'>
-              <SearchPage/>
+              <SearchPage />
             </Route>
             <PrivateRoute path="/preferences" component={Preferences} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
-            {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
+            <PrivateRoute path="/mainpage" component={MainPage} />
 
+            {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
+            <Route path='/Recommender'>
+              <SearchByPref />
+            </Route>
 
           </Switch>
         </T.Wrap>
+<<<<<<< HEAD
 
+=======
+        {/* <Search /> */}
+>>>>>>> 0b8c19f2ce004f829fa22dde5a6347df3a957817
         <Footer />
       </Provider>
     </div>

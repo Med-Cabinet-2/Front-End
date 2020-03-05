@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch|Slabo+27px&display=swap');
+
+* {
+  font-family: 'Slabo 27px', serif;
+}
+
 .App {
   text-align: center;
 }
@@ -61,10 +67,19 @@
   padding-top: 4%;
 }
 
+<<<<<<< HEAD
 body {
   background-color: #000000;
 }
 
 .provider {
   border: 1px solid red;
+=======
+#keyword {
+  margin-top: 2%;
+}
+
+.reset {
+  margin-left: 1%;
+>>>>>>> 0b8c19f2ce004f829fa22dde5a6347df3a957817
 }
