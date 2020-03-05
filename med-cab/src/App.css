@@ -52,9 +52,10 @@
   padding-top: 4%;
 }
 
+
 #keyword {
   margin: 5%;
-  padding: 5%;
+  padding: 1%;
   font-size: 15px;
 }
 
@@ -64,8 +65,9 @@
   background: black;
   border-radius: 3px;
   font-size: 15px;
-  padding: 1% 10%;
   width: 100px;
+  text-align: center;
+  padding: 1%;
 }
 
 .reset:hover {
@@ -73,5 +75,9 @@
 }
 
 #keyword-form {
-  margin: 6%;
+  margin: 3%;
+}
+
+.kw-name {
+  font-size: 20px;
 }

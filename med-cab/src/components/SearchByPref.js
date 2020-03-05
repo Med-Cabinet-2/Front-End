@@ -41,12 +41,12 @@ export default function SearchByPref() {
     return(
         <div className='preferences-search'>
             <form id='keword'>
-                <input id='keyword' type='text' name='keyword' placeholder='search by keyword' onChange={handleChange} value={query} />
+                <input id='keyword' type='text' name='keyword' placeholder='search &#x1F50D; by keyword' onChange={handleChange} value={query} />
                 <button className='reset'>Reset</button>
             </form>
             <div className='card-container-pref'>
             {data.map((e, i) => {
-                return <PrefCard key={i} name={e.strain_name} type={e.strain_type} description={e.strain_description}/>
+                return <PrefCard key={i} name={e.strain_name} rating={e.strain_rating} type={e.strain_type} description={e.strain_description}/>
             })}
             </div>
             
