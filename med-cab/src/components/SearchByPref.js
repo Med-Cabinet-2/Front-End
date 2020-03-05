@@ -46,15 +46,9 @@ export default function SearchByPref() {
                 <button className='reset'>Reset</button>
             </form>
             <div className='card-container-pref'>
-<<<<<<< HEAD
                 {data.map((e, i) => {
-                    return <PrefCard key={i} name={e.strain_name} type={e.strain_type} description={e.strain_description} />
+                    return <PrefCard key={i} name={e.strain_name} rating={e.strain_rating} type={e.strain_type} description={e.strain_description} />
                 })}
-=======
-            {data.map((e, i) => {
-                return <PrefCard key={i} name={e.strain_name} rating={e.strain_rating} type={e.strain_type} description={e.strain_description}/>
-            })}
->>>>>>> 09a67d684ba30a4a87429f28d0ff29d390f2fb19
             </div>
 
         </div>
