@@ -68,13 +68,13 @@
   padding-top    : 4%;
 }
 
+
 #keyword {
-  margin-top: 2%;
+  margin   : 5%;
+  padding  : 1%;
+  font-size: 15px;
 }
 
-.reset {
-  margin-left: 1%;
-}
 
 body {
   background-color: #000000;
@@ -82,4 +82,28 @@ body {
 
 .provider {
   border: 1px solid red;
+}
+
+.reset {
+  margin-left  : 1%;
+  margin       : 5% auto;
+  color        : white;
+  background   : black;
+  border-radius: 3px;
+  font-size    : 15px;
+  width        : 100px;
+  text-align   : center;
+  padding      : 1%;
+}
+
+.reset:hover {
+  background: #03630c;
+}
+
+#keyword-form {
+  margin: 3%;
+}
+
+.kw-name {
+  font-size: 20px;
 }
