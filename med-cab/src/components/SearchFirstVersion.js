@@ -88,7 +88,7 @@ export default function Searching() {
   console.log("Q U E R Y",query)
 
 return(
-  <div>
+  <T.FormBox>
       <form name="form" className="search">
         <input
           type="text"
@@ -102,7 +102,7 @@ return(
         <button type='submit' onSubmit={submitHandler}>Search</button>
       
       </form>  
-      <div>
+      <T.FilterBox>
         <p>Filter: </p>
         <a href="#"type='' onClick={e => setQuery('indica')}>#indica<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/indica.png'></img></a>
 
@@ -110,8 +110,8 @@ return(
 
         <a href="#"type='' onClick={e => setQuery('sativa')}>#sativa<img style={{width:'36px', height:'39px'}} src='https://francesjuniper.com/assets/sativa.png'></img></a>
 
-        <a href="#"type='' onClick={e => setQuery('test')}>#test</a>
-        </div>
+        
+        </T.FilterBox>
       <T.WeedBoxContainer>
         {strains.map(pot => (
 
@@ -120,11 +120,9 @@ return(
           <img style={{width:'2.5rem', height:'2.5rem'}} src={query == false ? 'https://francesjuniper.com/assets/indica.png' : `https://francesjuniper.com/assets/${query}.png`}/>
           </T.WeedBox>
         ))}
-        <div>
-          <p></p>
-        </div>
+ 
       </T.WeedBoxContainer>
-  </div>
+  </T.FormBox>
 )
 }
 // Frances Hansen

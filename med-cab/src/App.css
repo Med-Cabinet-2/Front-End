@@ -60,3 +60,11 @@
   justify-content: space-evenly;
   padding-top: 4%;
 }
+
+body {
+  background-color: #000000;
+}
+
+.provider {
+  border: 1px solid red;
+}

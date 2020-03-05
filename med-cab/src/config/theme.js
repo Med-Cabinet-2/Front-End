@@ -20,6 +20,9 @@ export const Header = styled.header `
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.secondary};
+  margin-top: 0;
+  
+  
 
 `
 
@@ -43,11 +46,15 @@ export const NavLinkx = styled(NavLink)`
 export const Wrap = styled.section `
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   color: ${props => props.theme.blinded};
   background-color: ${props => props.theme.primary};
-  height: 70vh;
+
+  width: 100%;
+  margin: auto ;
+
 
 `
 
@@ -88,9 +95,10 @@ margin-bottom: -30%;
 export const WeedBox = styled.div `
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  text-align: center;
+  flex-direction: column;
+  
   justify-content: center;
+  align-items: center;
   width: 200px;
   height: 150px;
   border: 1px solid black;
@@ -98,7 +106,9 @@ export const WeedBox = styled.div `
   -webkit-box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
   -moz-box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
   box-shadow: 0px 0px 26px 12px rgba(22,160,0,1);
-  margin: 3% auto;
+  margin: .5rem 1.6rem;
+ 
+  
 
 `
 
@@ -106,8 +116,43 @@ export const WeedBoxContainer = styled.section `
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
+  width: 90%;
   text-align: center;
+  margin: auto;
+  
+ height: 300px;
+   padding-bottom: 30%;
+
+  
+  
+
+`
+
+export const FormBox = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  width: 1000px;
+  
+  padding-bottom: 3%;
+  
+  margin: auto;
+  
+  
+
+`
+
+export const FilterBox = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  width: 500px;
+  
+  margin: auto;
   
   
 
@@ -119,6 +164,7 @@ background-image: linear-gradient(to left, #020d22, #052143, #043467, #02488e, #
 color: ${props => props.theme.sunrise};
 
 max-width: 85% !important;
+width: 750px;
 margin: 3% auto;
 `
 
