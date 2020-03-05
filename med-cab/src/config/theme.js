@@ -28,7 +28,8 @@ export const Header = styled.header `
 
 export const NavBar = styled.nav`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 35%;
 
     
 `;
@@ -36,10 +37,11 @@ export const NavBar = styled.nav`
 export const NavLinkx = styled(NavLink)`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-end;
     color: ${props => props.theme.blinded};
     text-decoration: none;
-    width: 100%;
+    width: 20%;
     
 `;
 
