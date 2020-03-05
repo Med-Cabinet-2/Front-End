@@ -1,9 +1,10 @@
 import React from 'react';
+import { T } from '../App'
 
 export default function Footer() {
     return(
-        <footer>
+        <T.Footer>
             <p>Copyright &copy; Weed Picker LLC</p>
-        </footer>
+        </T.Footer>
     );
 }

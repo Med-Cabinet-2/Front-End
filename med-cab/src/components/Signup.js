@@ -25,7 +25,7 @@ const Signup = ({ touched, errors, canRedirect, setCanRedirect }) => {
          
            <Field type='text' name='username' placeholder='Username' />
           {touched.username && errors.username && (
-            <p style={{width:'100%', fontSize: '.5rem', color: '#d50cd1', Zindex:'10001', marginLeft:'-100%', marginBottom:'-30%'}}>{errors.username}</p>
+            <T.P>{errors.username}</T.P>
           )}
         </label>
 
@@ -33,13 +33,16 @@ const Signup = ({ touched, errors, canRedirect, setCanRedirect }) => {
           
              <Field type='email' name='email' placeholder='Email' />
           {touched.email && errors.email && (
-            <p style={{width:'100%', fontSize: '.5rem', color: '#d50cd1', Zindex:'10001', marginLeft:'-100%', marginBottom:'-30%'}}>{errors.email}</p>
+            <T.P>{errors.email}</T.P>
           )}
         </label>
 
         <label>
           
              <Field type='password' name='password' placeholder='Password' />
+             {touched.password && errors.password && (
+            <T.P>{errors.password}</T.P>
+          )}
         </label>
 
         <label className='TOS'>
@@ -77,7 +80,8 @@ export default withFormik({
   validationSchema: Yup.object().shape({
     username: Yup.string().min(3).required('Please provide a valid username'),
     email: Yup.string().email().required('Please provide a valid e-mail address'),
-    TOS: Yup.bool().oneOf([true], "Must agree to TOS")
+    TOS: Yup.bool().oneOf([true], "Must agree to TOS"),
+    password: Yup.string().min(3).required('Password length must be longer than 3')
   }),
   handleSubmit: (values, { resetForm, setStatus }) => {
     let setCanRedirect = values.setCanRedirect
