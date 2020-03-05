@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {T} from '../App'
-import Searching from './Search'
+import Searching from './SearchFirstVersion'
 
 
 export default function SearchPage() {
 
   return(
     <div>
-      <T.H1>Search</T.H1>
+      <T.H1>Strain Search</T.H1>
       <Searching/>
     </div>
   )

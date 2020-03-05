@@ -37,10 +37,26 @@ export default function Searching() {
   const submitHandler = (event) => {
     event.preventDefault();
   } 
+  ///vvv the copypaster
 
   const indica = event => {
-    document.forms["form"]["search"].value += 'indica'
+    change();
+    document.forms["form"]["search"].value += `${query}`
   }
+
+
+
+  function change(){
+    let indicas = 'indica'
+    let {query} = {indicas};
+  
+  }
+
+  const changer = event => {
+    document.forms["form"]["search"].value += `indica`
+  }
+
+  
 
   const sativa = event => {
     document.forms["form"]["search"].value += 'sativa'
@@ -66,9 +82,10 @@ return(
         />
         <button type='submit' onSubmit={submitHandler}>Search</button>
 
-        <a href="#"type='' onClick={submitHandler,indica}>#indica</a>
-        <a href="#"type='' onClick={submitHandler,sativa}>#sativa</a>
-        <a href="#"type='' onClick={submitHandler,hybrid}>#hybrid</a>
+        <a href="#"type='' onClick={e => setQuery('indica')}>#indica</a>
+        <a href="#"type='' onClick={e => setQuery('sativa')}>#sativa</a>
+        <a href="#"type='' onClick={e => setQuery('hybrid')}>#hybrid</a>
+        <a href="#"type='' onClick={e => setQuery('test')}>#test</a>
       </form>
       <T.WeedBox>
         {strains.map(pot => (
