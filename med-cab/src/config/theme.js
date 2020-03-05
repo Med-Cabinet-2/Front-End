@@ -83,11 +83,12 @@ justify-content: center;
 export const P = styled.p `
 
 width: 100%;
-font-size: .5rem;
+font-size: .6rem;
 color: #d50cd1;
 z-index: 10001;
-margin-left: -100%;
-margin-bottom: -30%;
+margin-left: 100%;
+margin-bottom: -1%;
+margin-top: -7%;
 
 
 `
@@ -206,7 +207,8 @@ export const Footer = styled.footer `
   align-items: center;
   justify-content: space-around;
   color: ${props => props.theme.sunrise};
-  background-color: ${props => props.theme.primary};
+  background-color: black;
+
 
 `
 

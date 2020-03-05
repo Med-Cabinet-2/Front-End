@@ -9,13 +9,13 @@
 
 .errrors {
   width: 100%;
-  font-size: .5rem;
+  font-size: .6rem;
   color: #d50cd1;
   z-index: 10001;
-  margin-left: 300%;
-  margin-bottom: -30%;
-  margin-top: 8.734%;
-  top: 40px;
+  margin-left: 100%;
+  margin-bottom: -1%;
+  margin-top: -7%;
+  
 }
 
 .signin{
