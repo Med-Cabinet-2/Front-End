@@ -47,13 +47,13 @@ function App() {
             <PrivateRoute path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/mainpage" component={MainPage} />
 
-            {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
             <Route path='/Recommender'>
               <SearchByPref />
             </Route>
 
           </Switch>
         </T.Wrap>
+
         {/* <Search /> */}
         <Footer />
       </Provider>
