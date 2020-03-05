@@ -11,11 +11,13 @@ import { getSavedStrainData } from "../actions/index"
 
 const Dashboard = props => {
 
+  const id = window.localStorage.getItem('id');
+
   console.log(props)
 
   useEffect(() => {
     setTimeout(
-      props.getSavedStrainData()
+      props.getSavedStrainData(id)
       , 200)
   }, [])
 
