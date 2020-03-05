@@ -46,7 +46,6 @@ function App() {
 
           </Switch>
         </T.Wrap>
-        <Search />
         <Footer />
       </Provider>
     </div>

@@ -40,7 +40,7 @@ export default function SearchByPref() {
 
     return(
         <div className='preferences-search'>
-            <form>
+            <form id='keword'>
                 <input id='keyword' type='text' name='keyword' placeholder='search by keyword' onChange={handleChange} value={query} />
                 <button className='reset'>Reset</button>
             </form>

@@ -53,9 +53,25 @@
 }
 
 #keyword {
-  margin-top: 2%;
+  margin: 5%;
+  padding: 5%;
+  font-size: 15px;
 }
 
 .reset {
-  margin-left: 1%;
+  margin: 5% auto;
+  color: white;
+  background: black;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 1% 10%;
+  width: 100px;
+}
+
+.reset:hover {
+  background: #03630c;
+}
+
+#keyword-form {
+  margin: 6%;
 }
