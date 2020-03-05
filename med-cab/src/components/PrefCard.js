@@ -8,6 +8,14 @@ const Card = styled.div`
     width: 25%;
     margin-bottom: 3%;
     padding: 1%;
+
+    @media (max-width: 800px) {
+        width: 40%;
+
+        @media (max-width: 500px) {
+            width: 90%;
+        }
+    }
 `;
 
 
