@@ -33,9 +33,10 @@ export const getSavedStrainData = (id) => dispatch => {
     });
 };
 
-export const addSavedStrainData = (id) => dispatch => {
+export const addSavedStrainData = (id, obj) => dispatch => {
+  console.log("receiving this id and obj in addSavedStrainData", id, obj)
   axiosWithAuth()
-    .post(`/api/users/${id}/strains`)
+    .post(`/api/users/${id}/strains`, obj)
     .then(res => {
       console.log("apis res in updateSavedStrainData", res)
       getSavedStrainData()

@@ -10,12 +10,13 @@ import { removeSavedStrainData } from "../actions"
 
 const DashboardDiv = props => {
   console.log("props inside DashboardDiv", props)
+  const id = window.localStorage.getItem('id');
   return (
     <>
       <h1>{props.strain.strain_name}</h1>
       <p>{props.strain.strain_type}</p>
       <p>{props.strain.strain_description}</p>
-      <button onClick={() => { props.removeSavedStrainData() }}>Remove</button>
+      <button onClick={() => { props.removeSavedStrainData(id) }}>Remove</button>
     </>
   )
 }
