@@ -29,7 +29,7 @@ function Signin(props) {
                     {props.touched.password && props.errors.password && (<p className='errrors'>{props.errors.password}</p>)}
                     <button type='submit'>Sign in</button>
                 </Form>
-                <p>Don't have an account? <Link to='/signup'>Register here</Link></p>
+                <p>Don't have an account? <Link to='/main'>Register here</Link></p>
             </T.In>
         </div>
     );
