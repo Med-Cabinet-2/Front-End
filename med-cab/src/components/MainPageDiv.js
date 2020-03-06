@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { removeSavedStrainData } from "../actions"
+import { addSavedStrainData } from "../actions"
 
 // export const DashboardDiv = () => {
 //   return (
@@ -8,8 +8,10 @@ import { removeSavedStrainData } from "../actions"
 //   )
 // }
 
-const DashboardDiv = props => {
-  console.log("props inside DashboardDiv", props)
+
+
+const MainPageDiv = props => {
+  console.log("props inside MainPageDiv", props)
   const id = window.localStorage.getItem('id');
   return (
     <>
@@ -19,20 +21,20 @@ const DashboardDiv = props => {
       <p>{props.strain.strain_effects}</p>
       <p>{props.strain.strain_flavors}</p>
       <p>{props.strain.strain_description}</p>
-      <button onClick={() => { props.removeSavedStrainData(id, props.strain.strain_id) }}>Remove</button>
+      <button onClick={() => { props.addSavedStrainData(id, props.strain.strain_id) }}>Save</button>
     </>
   )
 }
 
 const mapStateToProps = (state, props) => {
   return {
-    savedStrains: state.savedStrains,
+    strains: state.strains,
     strain: props.strain
   }
 }
 
 export default connect(
   mapStateToProps,
-  { removeSavedStrainData }
-)(DashboardDiv)
+  { addSavedStrainData }
+)(MainPageDiv)
 

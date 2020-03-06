@@ -8,7 +8,7 @@ export default function Searching() {
 
     {
       id: 1,
-      name: "asdasd",
+      name: "Indica",
       img: `https://francesjuniper.com/assets/indica.png`,
 
 
@@ -16,7 +16,7 @@ export default function Searching() {
     },
     {
       id: 2,
-      name: "",
+      name: "Indica Plus",
       img: 'https://francesjuniper.com/assets/indica.png',
 
 
@@ -37,7 +37,7 @@ export default function Searching() {
 
   useEffect(() => {
     axios
-      .get(`http://strainapi.evanbusse.com/W9EAUtJ/strains/search/race/${query}`)
+      .get(`https://strainapi.evanbusse.com/W9EAUtJ/strains/search/race/${query}`)
        
       .then(response => {
         const data = Object.values(response.data);

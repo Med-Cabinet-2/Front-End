@@ -13,7 +13,9 @@ import Signup from './components/Signup';
 import Search from './components/Search';
 import PrivateRoute from './components/PrivateRoute';
 import Preferences from "./components/Preferences"
-import { Dashboard } from "./components/Dashboard"
+import Dashboard from "./components/Dashboard"
+import MainPage from "./components/Mainpage"
+import SearchByPref from './components/SearchByPref';
 import SearchPage from './components/SearchPage';
 // import Mainpage from "./component/Mainpage"
 export { T }
@@ -34,20 +36,25 @@ function App() {
             <Route exact path='/' >
               <Signin canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
             </Route>
-            <Route path='/signup'>
+            <Route path='/main'>
               <Signup canRedirect={canRedirect} setCanRedirect={setCanRedirect} />
             </Route>
 
             <Route path='/Search'>
-              <SearchPage/>
+              <SearchPage />
             </Route>
             <PrivateRoute path="/preferences" component={Preferences} />
             <PrivateRoute path="/dashboard" component={Dashboard} />
-            {/* <PrivateRoute path="Mainpage" component={Mainpage} /> */}
+            <PrivateRoute path="/mainpage" component={MainPage} />
 
+            <Route path='/Recommender'>
+              <SearchByPref />
+            </Route>
 
           </Switch>
         </T.Wrap>
+
+        {/* <Search /> */}
 
         <Footer />
       </Provider>

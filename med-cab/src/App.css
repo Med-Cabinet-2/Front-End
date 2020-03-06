@@ -1,25 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch|Slabo+27px&display=swap');
+
+* {
+  font-family: 'Slabo 27px', serif;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height        : 40vmin;
   pointer-events: none;
 }
 
 .errrors {
-  width: 100%;
-  font-size: .6rem;
-  color: #d50cd1;
-  z-index: 10001;
-  margin-left: 100%;
+  width        : 100%;
+  font-size    : .6rem;
+  color        : #d50cd1;
+  z-index      : 10001;
+  margin-left  : 100%;
   margin-bottom: -1%;
-  margin-top: -7%;
-  
+  margin-top   : -7%;
+
 }
 
-.signin{
-  
+.signin {
+  color: initial;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -30,13 +36,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height      : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  font-size       : calc(10px + 2vmin);
+  color           : white;
 }
 
 .App-link {
@@ -47,19 +53,28 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .card-container-pref {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  margin         : 0 auto;
   justify-content: space-evenly;
-  padding-top: 4%;
+  padding-top    : 4%;
 }
+
+
+#keyword {
+  margin   : 5%;
+  padding  : 1%;
+  font-size: 15px;
+}
+
 
 body {
   background-color: #000000;
@@ -67,4 +82,31 @@ body {
 
 .provider {
   border: 1px solid red;
+}
+
+.reset {
+  margin       : 5% auto;
+  color        : white;
+  background   : black;
+  border-radius: 3px;
+  font-size    : 15px;
+  width        : 100px;
+  text-align   : center;
+  padding      : 1%;
+}
+
+.reset:hover {
+  background: #03630c;
+}
+
+#keyword-form {
+  margin: 3%;
+}
+
+.kw-name {
+  font-size: 20px;
+}
+
+#keyword {
+  margin-top: 2%;
 }
